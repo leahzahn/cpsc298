@@ -1,5 +1,7 @@
 Leah Zahn
 Student ID: 2341427
 zahn@chapman.edu
-cpsc298, section 1
+CPSC298, Section 1
 Assignment 1
+
+Resources used: Zybooks textbook
