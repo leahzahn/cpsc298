@@ -23,7 +23,7 @@ int main(int argc, char** argv){
     cerr << "ERROR: Please enter a positive number of hours" << endl;
     return -1;
   }
-  else{ //if hoursWorked is positive, then the number of overtime hours is calculated
+  else{ //if hoursWorked is positive, then the number of overtime and regular hours are calculated
     if (hoursWorked > 40.0){
       regularHours = 40.0;
       overtimeHours = hoursWorked - 40.0;
