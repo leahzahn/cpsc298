@@ -1,48 +1,38 @@
 #include <iostream>
+#include <string>
+#include <sstream>
 using namespace std;
 
 int main(int argc, char** argv){
-  // // determine the size of the array
-  // int size = 10;
-  // if (argc <= 10){
-  //   size = argc - 1;
-  // }
-  //
-  // // create pointer to first element of the array
-  // int* numberArray = new int[size];
-  //
-  // // add each element of the command line input to the array
-  // for (int i = 0; i < size; ++i){
-  //   numberArray[i] = atoi(argv[i + 1]);
-  // }
-  //
-  // cout << "numberArray: {";
-  // for (int i = 0; i < size; ++i){
-  //   cout << numberArray[i] << " ";
-  // }
-  //
-  // cout << "}" << endl;
-  //
-  // delete numberArray;
 
+  int tempArray[10] = {0};
+  cout << "Enter a list of numbers on a single line separated by spaces: " ;
 
-  int numberArray[10] = {0};
+  string line;
+  getline(cin, line);
+  istringstream inSS(line);
+  int next;
   int counter = 0;
-  int userInput;
-  cout << ""
-  while (counter < 10){
-    cin >> userInput;
-    if (userInput >= 0){
-      numberArray[counter] = userInput;
-      ++ counter;
+  while (!inSS.eof() && counter < 10){
+    inSS >> next;
+    if (next >= 0){
+      tempArray[counter] = next;
+      ++counter;
     }
   }
 
+  cout << "counter: " << counter << endl;
+
+  int numberArray[counter] = {0};
+  for (int i = 0; i < counter; ++i){
+    numberArray[i] = tempArray[i];
+  }
+
   cout << "numberArray: {";
-  for (int i = 0; i < 10; ++i){
+  for (int i = 0; i < counter; ++i){
     cout << numberArray[i] << " ";
   }
-cout << "}" << endl;
+  cout << "}" << endl;
 
 
 
