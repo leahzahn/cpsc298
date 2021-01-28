@@ -50,6 +50,7 @@ void output(int inches){
   cout << "Length in centimeters: " << metersToCm(inchesToMeters(inches)) << endl;
 }
 
+// main loops through user input until "exit" is entered
 int main(int argc, char** argv){
   bool exit = false;
   int inches;
